@@ -1,0 +1,42 @@
+
+
+
+
+.Mycard{
+  box-shadow: $shadow;
+  border-radius: 10px;
+  background: white;
+  margin-bottom: 4em;
+  padding: 100px 1em 1em 1em;
+  height: 100%;
+
+  .iconCircle{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-25%);
+  }
+}
+
+
+@media all and (min-width: 768px) {
+
+  .iconCircle{
+    width: 170px;
+    height: 170px;
+  }
+
+  .Mycard{
+    box-shadow: $shadow;
+    border-radius: 10px;
+    background: white;
+    margin-bottom: 3em;
+    padding: 150px 1em 1em 1em;
+    height: 100%;
+
+    .iconCircle{
+      transform: translate(-50%,-25%);
+    }
+  }
+
+}

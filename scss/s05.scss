@@ -1,0 +1,66 @@
+.s05{
+  padding-bottom: 100px;
+
+  .tabs{
+    box-shadow: $shadow;
+    width: 100%;
+    transform: translateY(-50%);
+    border-radius: 25px;
+
+    button{
+      flex: 1 0 80px;
+      background: white;
+      color: $naranja;
+      border-left:1px solid #e4e4e4;
+      border-right:1px solid #e4e4e4;
+      margin: 0;
+      height: 45px;
+      text-align: center;
+      line-height: 1.2em;
+      font-size: 13px;
+
+      &:hover{
+        background: #f1f1f1;
+      }
+
+      &:focus{
+        outline: none;
+      }
+
+      z-index: 0;
+
+      &:last-child{
+        border-radius: 0 25px 25px 0;
+        border-right: none;
+        margin-left: -1px;
+      }
+
+      &:first-child{
+        border-radius:  25px 0 0  25px;
+        border-right: none;
+      }
+
+    }
+
+    button.active{
+      background: rgb(237,139,27);
+      background: linear-gradient(10deg, rgba(237,139,27,1) 0%, rgba(255,87,0,1) 100%);
+      color: white;
+    }
+  }
+
+  .btnArrow{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .btnArrow.right{
+    left: auto;
+    right: 0;
+  }
+
+}
