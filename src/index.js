@@ -1,6 +1,5 @@
 const css = require('../scss/main.scss');
 
-
 function whichTransitionEvent(){
     var t,
         el = document.createElement("fakeelement");
@@ -48,15 +47,4 @@ $(document).ready(function(){
     $('.slider').slick({
         arrows:false
     });
-
-    var alttura = $(".ancla").offset().top
-
-    $(".main-container").scroll(function () {
-
-        if($(".main-container").scrollTop() > alttura){
-            $(".menuFlotante").addClass("baja")
-        }else{
-            $(".menuFlotante").removeClass("baja")
-        }
-    })
 })

@@ -10,34 +10,19 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900,900i|Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="main-container">
+<div class="main-container position-relative">
     <header>
         <nav></nav>
     </header>
 
-    <div class="menuFlotante f01 jcfs px-3 py-2">
-        <div class="logo">
-            <img src="img/paypal.svg" alt="" class="imgr">
-        </div>
-        <div class="enlaces f01 jcfe">
-            <button>Visión general</button>
-            <button>Para pagos</button>
-            <button>Para retiros</button>
-            <button>Como usarlo</button>
-            <button class="main">Vincular paypal</button>
-        </div>
-    </div>
 
-    <div class="inicio py-4 ">
-
-
-
-
+    <div class="inicio">
         <div class="curva clip-me" id="#c1">
             <img src="img/curva01.svg" alt="" class="imgr c01">
             <img src="img/curva02.svg" alt="" class="imgr c02">
@@ -47,9 +32,9 @@
         <section class="s01">
             <div class="container f01 px-lg-0">
                 <div class="col-12 col-md-6 order-2 order-md-0">
-                   <div class="cont-vector">
-                       <img src="img/vectores/img01.png" alt="ePayco-checkout" class="imgr">
-                   </div>
+                    <div class="cont-vector">
+                        <img src="img/vectores/img01.png" alt="ePayco-checkout" class="imgr">
+                    </div>
                     <div class="ancla"></div>
                 </div>
                 <div class="col-12 col-md-6 pt-4 pb-4 ">
@@ -58,11 +43,27 @@
                         <div class="wc py-3">
                             <img src="img/paypal.svg" alt="PayPal" height="50px" width="auto">
                         </div>
-                        <p><img src="img/epayco.svg" alt="ePayco" height="25px" width="auto" class="mr-2"> lo deposita en su cuenta bancaria</p>
+                        <p><img src="img/epayco.svg" alt="ePayco" height="25px" width="auto" class="mr-2"> lo deposita en su
+                            cuenta bancaria</p>
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <div class="menuFlotante f01 jcfs px-3 py-2">
+            <div class="logo">
+                <img src="img/paypal.svg" alt="" class="imgr">
+            </div>
+            <div class="enlaces f01 jcfe">
+                <button>Visión general</button>
+                <button class="go07">Para pagos</button>
+                <button>Para retiros</button>
+                <button>Como usarlo</button>
+                <button class="main">Vincular paypal</button>
+            </div>
+        </div>
+
 
         <section class="s02 py-4 mt-4">
             <div class="container f01 px-lg-0 algs py-4">
@@ -73,18 +74,30 @@
                 <div class="col-12 col-md-4 text-center mb-5 ">
                     <div class="Mycard">
                         <div class="iconCircle">
-                            <img src="img/iconos/icon01.svg" alt="">
+                            <div class="contCaras">
+                                <div class="cara">
+                                    <img src="img/iconos/icon01.svg" alt="">
+                                </div>
+                                <div class="cara back"></div>
+                            </div>
                         </div>
                         <p class="title"><b>Reciba pagos a nivel <br> Mundial</b></p>
-                        <p>De forma rápida y simplificada, puede activar la opción para recibir sus pagos con PayPal y transferirlos a su cuenta bancaria en Colombia en el momento que lo requiera.</p>
+                        <p>De forma rápida y simplificada, puede activar la opción para recibir sus pagos con PayPal y
+                            transferirlos a su cuenta bancaria en Colombia en el momento que lo requiera.</p>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-4 text-center mb-5 ">
                     <div class="Mycard">
                         <div class="iconCircle">
-                            <img src="img/iconos/icon02.svg" alt="">
+                            <div class="contCaras">
+                                <div class="cara">
+                                    <img src="img/iconos/icon02.svg" alt="">
+                                </div>
+                                <div class="cara back"></div>
+                            </div>
                         </div>
+
                         <p class="title"><b>Facilita el proceso <br> Financiero</b></p>
                         <p>PayPal es la billetera digital más utilizada, con más de 230 millones de personas en todo el
                             mundo que eligen PayPal al momento de pagar y más de 19 millones de tiendas en línea aceptan
@@ -95,10 +108,16 @@
                 <div class="col-12 col-md-4 text-center mb-5 ">
                     <div class="Mycard">
                         <div class="iconCircle">
-                            <img src="img/iconos/icon03.svg" alt="">
+                            <div class="contCaras">
+                                <div class="cara">
+                                    <img src="img/iconos/icon03.svg" alt="">
+                                </div>
+                                <div class="cara back"></div>
+                            </div>
                         </div>
                         <p class="title"><b>Seguridad <br> y Respaldo</b></p>
-                        <p>La información financiera está protegida gracias a la tecnología en seguridad y monitoreo 24/7 de PayPal.
+                        <p>La información financiera está protegida gracias a la tecnología en seguridad y monitoreo 24/7 de
+                            PayPal.
                         </p>
                     </div>
                 </div>
@@ -110,28 +129,30 @@
 
     <section class="s03">
         <div class="container px-lg-0">
-            <div class="wc text-center title-section" ><h1>Cómo usar PayPal con ePayco    </h1></div>
+            <div class="wc text-center title-section"><h1>Cómo usar PayPal con ePayco </h1></div>
             <div class="wc f01">
                 <div class="col-12 col-md-6 text-md-left pb-5 pb-md-0">
                     <img src="img/vectores/img02.png" alt="ePayco-PayPal" class="imgr">
                 </div>
                 <div class="col-12 col-md-6">
-                   <div class="limit-txt">
-                       <div class="wc pb-3">
-                           <b>Para Pagos</b>
-                       </div>
-                       <p>Sus clientes pueden utilizar PayPal como medio de pago en el checkout de pago , solo con su correo electrónico y contraseña para realizar el pago de forma segura, las siguientes son las principales características:</p>
+                    <div class="limit-txt">
+                        <div class="wc pb-3">
+                            <b>Para Pagos</b>
+                        </div>
+                        <p>Sus clientes pueden utilizar PayPal como medio de pago en el checkout de pago , solo con su
+                            correo electrónico y contraseña para realizar el pago de forma segura, las siguientes son
+                            las principales características:</p>
 
-                       <ul class="myList">
-                           <li>Habilite fácilmente PayPal como medio de pago desde el tablero de administración.​</li>
+                        <ul class="myList">
+                            <li>Habilite fácilmente PayPal como medio de pago desde el tablero de administración.​</li>
 
-                           <li>Visualice en tiempo real los pagos recibidos con PayPal.​</li>
+                            <li>Visualice en tiempo real los pagos recibidos con PayPal.​</li>
 
-                           <li>Uso simplificado para sus clientes al seleccionar PayPal como medio de pago. ​</li>
+                            <li>Uso simplificado para sus clientes al seleccionar PayPal como medio de pago. ​</li>
 
-                           <li>Brinde un medio de pago seguro y globalmente aceptado.</li>
-                       </ul>
-                   </div>
+                            <li>Brinde un medio de pago seguro y globalmente aceptado.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,25 +160,32 @@
 
     <section class="s04">
         <div class="container px-lg-0">
-            <div class="wc text-center title-section" ><h1>Cómo usar PayPal con ePayco</h1></div>
+            <div class="wc text-center title-section"><h1>Cómo usar PayPal con ePayco</h1></div>
             <div class="wc f01">
                 <div class="col-12 col-md-6">
                     <div class="limit-txt">
                         <div class="wc pb-3">
                             <b>Para Retiros</b>
                         </div>
-                        <p>Retire su dinero de PayPal a una cuenta en Colombia de forma simplificada y sin complejas restricciones, las siguientes son las principales características:</p>
+                        <p>Retire su dinero de PayPal a una cuenta en Colombia de forma simplificada y sin complejas
+                            restricciones, las siguientes son las principales características:</p>
 
                         <ul class="myList">
                             <li>Visualice su saldo PayPal en línea desde el panel de administración.​</li>
 
-                            <li>Solicite su dinero de PayPal en línea sin llenar extensos formatos o cumplir condiciones engorrosas.​</li>
+                            <li>Solicite su dinero de PayPal en línea sin llenar extensos formatos o cumplir condiciones
+                                engorrosas.​
+                            </li>
 
                             <li>Su dinero de Dólares a Pesos Colombianos en línea. ​</li>
 
-                            <li>Durante los retiros se muestra el detalle del retiro y las comisiones, sin tarifas ocultas.​</li>
+                            <li>Durante los retiros se muestra el detalle del retiro y las comisiones, sin tarifas
+                                ocultas.​
+                            </li>
 
-                            <li>El dinero PayPal es abonado en su cuenta bancaria entre 24 y 48 horas hábiles según el procesamiento del sistema financiero Colombiano.</li>
+                            <li>El dinero PayPal es abonado en su cuenta bancaria entre 24 y 48 horas hábiles según el
+                                procesamiento del sistema financiero Colombiano.
+                            </li>
 
                             <li>Comisión de cada retiro sin importar el monto: USD $10 + impuestos.​</li>
 
@@ -166,102 +194,146 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 text-md-right">
-                    <img src="img/vectores/img04.png" alt="ePayco-PayPal" class="imgr" style="max-width: 430px; margin: 0 0 0 auto">
+                    <img src="img/vectores/img04.png" alt="ePayco-PayPal" class="imgr"
+                         style="max-width: 430px; margin: 0 0 0 auto">
                 </div>
             </div>
         </div>
     </section>
 
 
-
     <section class="s05">
-            <div class="wc text-center title-section"><h1>¿Cómo usarlo?</h1></div>
-            <div class="paypaldeg wc">
-                <div class="container px-lg-0">
-                    <div class="tabs f01">
-                        <button class="active">Vincular PayPal</button>
-                        <button>Relizar Pagos</button>
-                        <button>Realizar retiros</button>
-                    </div>
+        <div class="wc text-center title-section"><h1>¿Cómo usarlo?</h1></div>
+        <div class="paypaldeg wc">
+            <img src="img/nubesU.svg" alt="" class="nuves">
+            <img src="img/nubesD.svg" alt="" class="nuves ndown">
+            <div class="container px-lg-0">
+                <div class="tabs f01">
+                    <button class="active">Vincular PayPal</button>
+                    <button>Relizar Pagos</button>
+                    <button>Realizar retiros</button>
                 </div>
-                <div class="container f01 py-5 position-relative">
-                    <div class="col-12 col-md-6 pb-5 pb-md-0">
-                        <img src="img/compurter.png" alt="" class="imgr">
-                    </div>
-                    <button class="btnArrow"><img src="img/leftArrow.png" alt="" class="imgr"></button>
-                    <button class="btnArrow right"><img src="img/rightArrow.png" alt="" class="imgr"></button>
-                    <div class="col-12 col-md-6">
-                        <div class="slider">
-                            <div class="slide cb ">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis dolorem eaque, error et facere, facilis fuga impedit in iure laboriosam officiis omnis quos recusandae saepe sequi temporibus totam voluptate.
-                            </div>
-                            <div class="slide cb ">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis dolorem eaque, error et facere, facilis fuga impedit in iure laboriosam officiis omnis quos recusandae saepe sequi temporibus totam voluptate.
-                            </div><div class="slide  cb">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis dolorem eaque, error et facere, facilis fuga impedit in iure laboriosam officiis omnis quos recusandae saepe sequi temporibus totam voluptate.
+            </div>
+            <div class="container f01 py-5 position-relative">
+                <div class="col-12 col-md-6 pb-5 pb-md-0">
+                    <img src="img/compurter.png" alt="" class="imgr">
+                </div>
+                <button class="btnArrow"><img src="img/leftArrow.png" alt="" class="imgr"></button>
+                <button class="btnArrow right"><img src="img/rightArrow.png" alt="" class="imgr"></button>
+                <div class="col-12 col-md-6">
+                    <div class="slider">
+                        <div class="slide cb ">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis dolorem eaque,
+                            error et facere, facilis fuga impedit in iure laboriosam officiis omnis quos recusandae
+                            saepe sequi temporibus totam voluptate.
+                        </div>
+                        <div class="slide cb ">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis dolorem eaque,
+                            error et facere, facilis fuga impedit in iure laboriosam officiis omnis quos recusandae
+                            saepe sequi temporibus totam voluptate.
+                        </div>
+                        <div class="slide  cb">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis dolorem eaque,
+                            error et facere, facilis fuga impedit in iure laboriosam officiis omnis quos recusandae
+                            saepe sequi temporibus totam voluptate.
                         </div>
 
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
 
     <section class="s06">
         <div class="container text-center">
-           <div class="texto">
-               <h1>Un gran respaldo <br> con los mejores productos y servicios </h1>
-               <p class="desc">Con el respaldo de <img src="img/paypal.svg" alt="PayPal-mini" height="25px" width="auto" class="mx-2">  el servicio de pagos mas importante a nivel mundial, desde ePayco le ofrecemos una gran variedad de productos y servicios que le permiten llevar su negocio al siguiente nivel.
-               </p>
-           </div>
+            <div class="texto">
+                <h1>Un gran respaldo <br> con los mejores productos y servicios </h1>
+                <p class="desc">Con el respaldo de <img src="img/paypal.svg" alt="PayPal-mini" height="25px"
+                                                        width="auto" class="mx-2"> el servicio de pagos mas importante a
+                    nivel mundial, desde ePayco le ofrecemos una gran variedad de productos y servicios que le permiten
+                    llevar su negocio al siguiente nivel.
+                </p>
+            </div>
 
             <div class="wc f01 algfs">
                 <div class="col-6 col-md-4 col-lg-3 mb-3 text-center icon-text">
                     <div class="iconCircle">
-                        <img src="img/iconos/icon04.svg" alt="">
+                        <div class="contCaras">
+                            <div class="cara"><img src="img/iconos/icon04.svg" alt="">
+                            </div>
+                            <div class="cara back"></div>
+                        </div>
                     </div>
                     <b>Administración de usuarios</b>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 mb-3 text-center icon-text">
                     <div class="iconCircle">
-                        <img src="img/iconos/icon05.svg" alt="">
+                        <div class="contCaras">
+                            <div class="cara"><img src="img/iconos/icon05.svg" alt="">
+                            </div>
+                            <div class="cara back"></div>
+                        </div>
                     </div>
                     <b>Suscripciones</b>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 mb-3 text-center icon-text">
                     <div class="iconCircle">
-                        <img src="img/iconos/icon06.svg" alt="">
+                        <div class="contCaras">
+                            <div class="cara"><img src="img/iconos/icon06.svg" alt="">
+                            </div>
+                            <div class="cara back"></div>
+                        </div>
                     </div>
                     <b>Reportes</b>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 mb-3 text-center icon-text">
                     <div class="iconCircle">
-                        <img src="img/iconos/icon07.svg" alt="">
+                        <div class="contCaras">
+                            <div class="cara"><img src="img/iconos/icon07.svg" alt="">
+                            </div>
+                            <div class="cara back"></div>
+                        </div>
                     </div>
                     <b>Recaudo</b>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 mb-3 text-center icon-text">
                     <div class="iconCircle">
-                        <img src="img/iconos/icon08.svg" alt="">
+                        <div class="contCaras">
+                            <div class="cara"><img src="img/iconos/icon08.svg" alt="">
+                            </div>
+                            <div class="cara back"></div>
+                        </div>
                     </div>
                     <b>Administración de sitios</b>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 mb-3 text-center icon-text">
                     <div class="iconCircle">
-                        <img src="img/iconos/icon09.svg" alt="">
+                        <div class="contCaras">
+                            <div class="cara"><img src="img/iconos/icon09.svg" alt="">
+                            </div>
+                            <div class="cara back"></div>
+                        </div>
                     </div>
                     <b>Habilitación de nuevos servicios</b>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 mb-3 text-center icon-text">
                     <div class="iconCircle">
-                        <img src="img/iconos/icon10.svg" alt="">
+                        <div class="contCaras">
+                            <div class="cara"><img src="img/iconos/icon10.svg" alt="">
+                            </div>
+                            <div class="cara back"></div>
+                        </div>
                     </div>
                     <b>Generar cobros</b>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 mb-3 text-center icon-text">
                     <div class="iconCircle">
-                        <img src="img/iconos/icon11.svg" alt="">
+                        <div class="contCaras">
+                            <div class="cara"><img src="img/iconos/icon11.svg" alt="">
+                            </div>
+                            <div class="cara back"></div>
+                        </div>
                     </div>
                     <b>Integraciones</b>
                 </div>
@@ -301,35 +373,39 @@
 
     <footer class="wc py-4">
         <div class="container f01 px-lg-0">
-            <div class="logo-footer text-center mb-3 mb-sm-0 col-12 col-sm-4 text-sm-left" >
+            <div class="logo-footer text-center mb-3 mb-sm-0 col-12 col-sm-4 text-sm-left">
                 <img src="img/epayco-b.svg" alt="ePayco-blanco">
             </div>
 
             <div class="redes f01 col-12 col-sm-8 justify-content-sm-end">
-                <a href="" class="text-center mx-2 mx-sm-0 ml-sm-3 imgb redS"> <img src="img/redes/facebook.svg" alt="" height="35px" width="auto"  ></a>
-                <a href="" class="text-center mx-2 mx-sm-0 ml-sm-3 imgb redS"> <img src="img/redes/twitter.svg" alt="" height="35px" width="auto"  ></a>
-                <a href="" class="text-center mx-2 mx-sm-0 ml-sm-3 imgb redS"> <img src="img/redes/instagram.svg" alt="" height="35px" width="auto"  ></a>
-                <a href="" class="text-center mx-2 mx-sm-0 ml-sm-3 imgb redS"> <img src="img/redes/linkedin.svg" alt="" height="35px" width="auto"  ></a>
+                <a href="" class="text-center mx-2 mx-sm-0 ml-sm-3 imgb redS"> <img src="img/redes/facebook.svg" alt=""
+                                                                                    height="35px" width="auto"></a>
+                <a href="" class="text-center mx-2 mx-sm-0 ml-sm-3 imgb redS"> <img src="img/redes/twitter.svg" alt=""
+                                                                                    height="35px" width="auto"></a>
+                <a href="" class="text-center mx-2 mx-sm-0 ml-sm-3 imgb redS"> <img src="img/redes/instagram.svg" alt=""
+                                                                                    height="35px" width="auto"></a>
+                <a href="" class="text-center mx-2 mx-sm-0 ml-sm-3 imgb redS"> <img src="img/redes/linkedin.svg" alt=""
+                                                                                    height="35px" width="auto"></a>
             </div>
         </div>
     </footer>
 </div>
 
-    <!--//boostrap  -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-    <!--//boostrap  -->
+<!--//boostrap  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<!--//boostrap  -->
 
-    <!--CARRUSEL-->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!--CARRUSEL-->
+<!--CARRUSEL-->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--CARRUSEL-->
 
 
 </body>
