@@ -42,9 +42,32 @@ function whichAnimationEvent(){
 
 var animationEvent = whichAnimationEvent();
 
+var tabs = $(".tabs").find("button");
+var nubeD = $(".ndown")
 
 $(document).ready(function(){
     $('.slider').slick({
         arrows:false
     });
+
+    tabs.eq(0).click(function () {
+        tabs.removeClass("active")
+        $(this).addClass("active")
+        nubeD.removeClass("middle right")
+    })
+
+    tabs.eq(1).click(function () {
+        tabs.removeClass("active")
+        $(this).addClass("active")
+        nubeD.addClass("middle")
+        nubeD.removeClass("right")
+    })
+
+    tabs.eq(2).click(function () {
+        tabs.removeClass("active")
+        $(this).addClass("active")
+        nubeD.addClass("right")
+        nubeD.removeClass("middle")
+    })
+
 })

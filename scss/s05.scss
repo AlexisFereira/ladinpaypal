@@ -4,6 +4,8 @@
   .paypaldeg{
     min-height: 55vh;
     position:relative;
+    overflow:hidden;
+
     .nuves{
       position: absolute;
       top:-2px;
@@ -12,18 +14,28 @@
       height: auto;
       display: block;
       z-index:0;
+      @extend %tr;
     }
 
     .nuves.ndown{
       top:auto;
       bottom: -2px;
+      width: 300%;
+    }
+
+    .nuves.ndown.middle{
+      transform: translateX(-33.33%);
+    }
+
+    .nuves.ndown.right{
+      transform: translateX(-66.66%);
     }
   }
 
   .tabs{
     box-shadow: $shadow;
     width: 100%;
-    transform: translateY(-50%);
+    transform: translateY(-20%);
     border-radius: 25px;
 
     button{
