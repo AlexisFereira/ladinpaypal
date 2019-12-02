@@ -1,3 +1,110 @@
 .s04{
   padding-bottom: 100px;
+
+
+  b{font-size: 24px; color: $naranja}
+
+
+  .cont-vector{
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+
+    img{position: relative;}
+
+    .coin1,
+    .coin2,
+    .coin3,
+    .coin4,
+    .coin5,
+    .wallet,
+    .arm{
+        position: absolute;
+        width:17% ;
+    }
+
+    .coin1 {
+      top: 10%;
+      right:50%;
+      animation: coin 2s ease-in-out infinite;
+    }
+    .coin2 {
+      top: 13%;
+      right:45%;
+      animation: coin2 2s ease-in-out .2s infinite;
+    }
+    .coin3 {
+      top: 11%;
+      right:40%;
+      animation: coin3 2s ease-in-out .4s infinite;
+    }
+
+    .coin4 {
+      top: 13%;
+      right:35%;
+      animation: coin4 2s ease-in-out .6s infinite;
+    }
+    .coin5 {
+      top: 15%;
+      right:30%;
+      animation: coin5 1s ease-in-out .8s infinite;
+    }
+
+    .wallet{
+      width: 47%;
+      bottom: 17%;
+      left: 27%;
+      transform-origin: bottom right;
+      animation: wallet 2s ease-in-out 1.5s  infinite;
+    }
+    .arm{
+      width: 16%;
+      bottom: 32%;
+      right: 18%;
+    }
+
+    .paypal{
+      max-width: 350px;
+      margin: auto;
+      margin-bottom: 10vh;
+    }
+  }
+}
+
+@keyframes coin {
+  0%{opacitiy:0;transform: scale(.8) translateY(0) rotate(0deg)}
+  20%{opacity:1;transform: scale(1.05) translateY(0) rotate(0deg)}
+  22%{transform: scale(1) translateY(0) rotate(45deg)}
+  100%{transform: scale(1) translateY(350%) rotate(360deg)}
+}
+@keyframes coin2 {
+  0%{opacitiy:0;transform: scale(.8) translateY(0) rotate(0deg)}
+  20%{opacity:1;transform: scale(1.05) translateY(0) rotate(0deg)}
+  22%{transform: scale(1) translateY(0) rotate(45deg)}
+  100%{transform: scale(1) translateY(350%) rotate(360deg)}
+}
+@keyframes coin3 {
+  0%{opacitiy:0;transform: scale(.8) translateY(0) rotate(0deg)}
+  20%{opacity:1;transform: scale(1.05) translateY(0) rotate(0deg)}
+  22%{transform: scale(1) translateY(0) rotate(45deg)}
+  100%{transform: scale(1) translateY(350%) rotate(360deg)}
+}@keyframes coin4 {
+   0%{opacitiy:0;transform: scale(.8) translateY(0) rotate(0deg)}
+   20%{opacity:1;transform: scale(1.05) translateY(0) rotate(0deg)}
+   22%{transform: scale(1) translateY(0) rotate(45deg)}
+   100%{transform: scale(1) translateY(350%) rotate(360deg)}
+ }
+@keyframes coin5 {
+  0%{opacitiy:0;transform: scale(.8) translateY(0) rotate(0deg)}
+  20%{opacity:1;transform: scale(1.05) translateY(0) rotate(0deg)}
+  22%{transform: scale(1) translateY(0) rotate(45deg)}
+  100%{transform: scale(1) translateY(350%) rotate(360deg)}
+}
+
+@keyframes wallet {
+  0%{transform: scale(1)}
+  78%{transform: scale(1.05) }
+  90%{transform: scale(0.98) }
+  100%{transform: scale(1) }
 }

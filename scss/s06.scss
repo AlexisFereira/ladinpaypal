@@ -1,10 +1,22 @@
 .s06{
   padding-bottom: 100px;
-  background-image:url(../img/manchas/puntosLeft.png),url(../img/manchas/manchaAzul.png);
-  background-repeat: no-repeat,no-repeat;
-  background-position:0 0, 0 10%;
-  background-size: 15% auto,40% auto;
-  padding-bottom: 100px;
+  position: relative;
+
+  .mancha{
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width:35%;
+    z-index: 0;
+  }
+
+  .puntos{
+    position: absolute;
+    left: 0;
+    top: 0%;
+    width: 20%;
+    z-index: 0;
+  }
 
   .icon-text{
 

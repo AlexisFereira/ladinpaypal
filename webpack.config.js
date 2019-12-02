@@ -18,7 +18,7 @@ module.exports = (env, args) => {
         output: {
             path: path.resolve(__dirname, './dist'),
             filename: 'bundle.[hash:4].js',
-            publicPath: '/'
+            publicPath: 'noenter/'
         },
 
         performance: {

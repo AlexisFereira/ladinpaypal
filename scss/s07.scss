@@ -1,14 +1,30 @@
 .s07{
-  background-image:url(../img/manchas/puntosF.png),url(../img/manchas/manchafooter.png);
-  background-repeat: no-repeat,no-repeat;
-  background-position: 40% 100%, bottom right;
-  background-size: 500px auto,50% auto;
   padding-bottom: 100px;
+  position: relative;
+
+
+  .mancha{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+  }
+
+  .puntos{
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+    height: 300px;
+    width: auto;
+  }
+
 
   .chico{
+    width: 50%;
     max-width: 240px;
     height: auto;
     margin: auto;
+    animation: eleva 2s ease-in-out infinite alternate;
   }
   .btnRound {
     width: 100%;
