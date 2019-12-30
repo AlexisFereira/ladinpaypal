@@ -9,6 +9,14 @@
     width: 8%;
   }
 
+  #terminos{
+    color: $azulPaypaln;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
   .puntos{
     position: absolute;
     top: 0;

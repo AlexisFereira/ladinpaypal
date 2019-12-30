@@ -145,6 +145,260 @@ button{
   }
 }
 
+//==========================================================================
+//==========================================================================
+//  HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER
+//==========================================================================
+
+header {
+  position:relative;
+  background: white;
+  width:100%;
+  padding:10px;
+  z-index: 999;
+
+  .logo{
+    flex:0 0 auto;
+    padding: .5em .75em;
+    img{
+      max-height: 30px;
+      max-width: 200px;
+      width:auto;
+      height:auto;
+    }
+  }
+
+  .icon-menu{
+    flex:1 0 40px;
+
+    button{
+      width:40px;
+      text-align: center;
+      background:transparent;
+      cursor: pointer;
+
+      &:hover{
+
+      }
+    }
+
+  }
+
+  .cont-menu{
+    max-height: calc(100vh - 50px);
+    width: 100%;
+    flex:1 0 70%;
+    height:40px;
+    position:relative;
+    justify-content: flex-end;
+    font-size:14px;
+
+    a{color: $negro}
+
+
+    .menu01{
+      flex: 1 0 70%;
+      height:40px;
+      list-style: none;
+      justify-content: flex-start;
+      margin-bottom: 0;
+
+
+      li{
+        padding: 13px .75em;
+        flex: 0 0 auto;
+        height: 46px;
+        overflow: hidden;
+
+        .material-icons{
+          height: 10px;
+          font-size: 14px!important;
+        }
+
+        .submenu{
+          overflow: hidden;
+          position: absolute;
+          top: 100%;
+          display: none;
+          background: white;
+          border-radius: 10px;
+          padding:.3em;
+          height: 0;
+          box-shadow: 0 5px 10px rgba(0,0,0,.1);
+
+          a{
+            display: block;
+            padding:.7em;
+            border-radius:8px;
+            color: black;
+            margin:3px 0;
+
+            &:hover{
+             background: rgba(0,0,0,.03);
+             text-decoration: none;
+            }
+
+            p{
+              margin-bottom: 0;
+              padding-top: 10px;
+              color: black;
+            }
+
+            .orange{
+              color:$naranja;
+            }
+
+
+
+          }
+
+        }
+
+        &:hover{
+          .submenu{
+            height: auto;
+            display: block;
+          }
+        }
+
+      }
+    }
+
+    .menu02{
+      flex:0 0 auto;
+      height:40px;
+
+      .support{
+        margin-right: 1em;
+        display: block;
+        width: 20px;
+
+        span{
+          display: none;
+        }
+      }
+
+      .login{
+        height: 48px;
+        border-radius:8px;
+        margin-left: .75em;
+        padding: 13px .75em;
+        color: $naranja;
+        text-align: center;
+        &:hover{
+          background: rgba(0,0,0,0.03);
+        }
+
+        &:last-child{
+          background: $naranja;
+          color:white;
+          border: 2px solid $naranja;
+          padding: 11px .75em;
+
+          &:hover{
+            background: white;
+            color:$naranja;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media all and (max-width:980px){
+  header{
+    .cont-menu{
+      border-top:2px solid #e4e4e4;
+      display: none;
+      position: absolute;
+      right:0;
+      height: auto;
+      top: 60px;
+      max-width: 400px;
+      background: white;
+      overflow: hidden;
+      overflow-y: auto;
+      padding: 8px;
+
+      .menu01{
+        height: auto;
+        flex:1 0 100%;
+
+        li{
+          width:100%;
+          flex: 1 0 100%;
+          border-bottom:1px solid #e4e4e4;
+          height: auto;
+          min-height: 50px;
+          padding:.5em .75em;
+
+          .link{
+            width: 100%;
+            height:35px;
+            line-height: 35px;
+            display: block;
+
+          }
+
+
+          .submenu{
+            position: relative;
+            width: 100%;
+            box-shadow: none;
+            padding: 0;
+            max-height:0px;
+
+            a{
+              border-bottom:1px dashed #e4e4e4;
+            }
+          }
+
+
+          .sOpen{
+            max-height: 100vh;
+            height: auto;
+            display: block;
+          }
+        }
+      }
+
+      .menu02{
+        height: auto;
+        width: 100%;
+        justify-content: flex-start;
+        padding-top: 10px;
+
+        .support{
+          display:block;
+          width:100%;
+
+
+          .material-icons,span{
+            line-height: 35px;
+            height: 35px;
+            display: inline-block;
+            vertical-align: top;
+          }
+        }
+
+      .login{
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+      }
+    }
+
+    .cont-menu.SM{
+      display: flex!important;
+    }
+  }
+}
+
+
+
+
 
 //==========================================================================
 //==========================================================================
@@ -338,7 +592,26 @@ button{
 }
 
 
+.globoInfo{
+  padding:.75em;
+  border-radius:10px;
+  background:$azulPaypaln;
+  color: white;
 
+  &:before{
+    content:"";
+    width:30px;
+    height:30px;
+    border-radius: 8px;
+    background:$azulPaypaln;
+    transform: rotate(45deg);
+    position: absolute;
+    right:calc(100% - 18px);
+    top:calc(50% - 15px);
+    z-index: -1;
+
+  }
+}
 
 
 
@@ -358,10 +631,45 @@ footer{
 
     .redS{
       width: 40px;
-      height: 40px;
+      height: 30px;
+
+      img{
+        width: auto;
+        height:100%;
+        display: block;
+      }
     }
   }
 }
+
+@media all and (max-width: 768px) {
+
+  footer{
+
+    .logo-footer{
+      flex: 1 0 250px;
+      img{max-height: 40px;width: auto;height: auto;margin:auto; }
+    }
+
+    background: $negro;
+
+    .redes{
+      padding-top:20px;
+
+      .redS{
+        width: auto;
+        height: 30px;
+
+        img{
+          width: auto;
+          height:100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 
 
 // Small devices (landscape phones, 576px and up)
@@ -396,8 +704,8 @@ footer{
 }
 
 @keyframes legs {
-  from{transform:rotate(-15deg);}
-  to{transform:rotate(15deg);}
+  from{transform:rotate(-5deg);}
+  to{transform:rotate(5deg);}
 }
 
 @keyframes rotate {

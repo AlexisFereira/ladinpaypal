@@ -4,6 +4,15 @@
 
   b{font-size: 24px; color: $naranja}
 
+  .myList{
+    .resaltado{
+      font-weight: bold;
+      background: rgba(0,0,150,.05);
+      border-radius: 5px;
+      padding: .5em .75em;
+    }
+  }
+
 
   .cont-vector{
     max-width: 400px;

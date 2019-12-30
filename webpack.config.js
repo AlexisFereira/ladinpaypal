@@ -11,14 +11,16 @@ module.exports = (env, args) => {
 
     const devMode = args.mode !== "production";
 
+    console.log()
+
     return{
 
         mode:'development',
-        entry: './src/index.js',
+        entry:  path.resolve(__dirname, './src/index.js'),
         output: {
             path: path.resolve(__dirname, './dist'),
             filename: 'bundle.[hash:4].js',
-            publicPath: 'noenter/'
+            publicPath: '/'
         },
 
         performance: {
@@ -29,16 +31,33 @@ module.exports = (env, args) => {
         devServer: {
             contentBase: path.join(__dirname, '/dist'),
             compress: true,
-            port: 9000,
+            port: 7000,
+            host:"0.0.0.0",
             stats: 'errors-only'
+        },
+        optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    styles: {
+                        name: 'styles',
+                        test: /\.css$/,
+                        chunks: 'all',
+                        enforce: true,
+                    },
+                },
+            },
         },
         module: {
             rules: [
                 {
                     test: /\.js$/,
-                    exclude: /node_modules/,
+                    exclude:  /(node_modules|bower_components)/,
                     use: {
-                        loader: "babel-loader"
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['@babel/preset-env'],
+                            plugins: ['@babel/plugin-proposal-object-rest-spread']
+                        }
                     }
                 },
                 {
@@ -48,7 +67,9 @@ module.exports = (env, args) => {
                 {
                     test: /\.scss$/,
                     use: [
-                        devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                        },
                         "css-loader",
                         'sass-loader'
                     ]
@@ -57,8 +78,8 @@ module.exports = (env, args) => {
                     test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico)$/,
                     loader: "file-loader",
                     options: {
-                        publicPath: "public/",
-                        outputPath: "public/"
+                        publicPath: "img",
+                        outputPath: "img"
                     }
                 }
             ]

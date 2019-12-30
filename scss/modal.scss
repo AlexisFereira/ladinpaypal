@@ -1,0 +1,240 @@
+.cont-modal{
+  position: fixed;
+  top: 0;
+  width:100%;
+  height: 100%;
+  left: 0;
+  z-index: 9999;
+  transform: translateZ(0);
+
+  .sombra{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: #253B80;
+    z-index: 1;
+    opacity: 0;
+    transform: translateZ(0);
+  }
+
+  .area{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width:100%;
+    height: auto;
+    max-height: 90%;
+    z-index: 2;
+    transform: translate3d(0,-50%,0);
+
+
+    .ventana{
+      background: white;
+      padding: 4px;
+      width: 90%;
+      border-radius: 10px;
+      box-shadow: $shadow;
+      max-width: 1080px;
+      margin-right: 15px;
+      opacity: 0;
+
+      .close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 999;
+        background: white;
+        border-radius: 12px;
+        opacity: 1;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        cursor: pointer;
+
+        .material-icons{
+          font-size: 14px;
+        }
+
+      }
+
+      .titulo{
+        position: absolute;
+        background:rgba(0,0,0,.8);
+        top: 20px;
+        left:20px;
+        color: white;
+        z-index: 99;
+        font-size: 18px;
+        padding: .5em 1.5em;
+        border-radius: 35px;
+
+        .pagos,.vincula,.retiros{
+          overflow: hidden;
+          opacity: 0;
+          width: 0;
+          word-break: keep-all;
+          white-space: nowrap;
+        }
+      }
+
+      .btn-van{
+        position: absolute;
+        top: calc(50% - 12px);
+        width: 25px;
+        height: 25px;
+        border-radius: 12.5px;
+        background: white;
+        color: $negro;
+        text-align: center;
+        left: 15px;
+        z-index: 88;
+
+        .material-icons{
+          height: 100%!important;
+        }
+
+
+      }
+
+      .btn-van.right{
+        left: auto;
+        right: 15px;
+      }
+    }
+
+  }
+}
+
+.sliderStep01,
+.sliderStep02,
+.sliderStep03{
+  width: 100%;
+  position: relative;
+
+
+  .slick-dots{
+    position: absolute;
+    @extend .f01;
+    bottom: 10px;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+
+    li{
+      width: 8px;
+      list-style: none;
+      height: 8px;
+      border-radius:5px;
+      background: rgba(0,0,0,.5);
+      margin-right: 1em;
+
+      button{
+        opacity: 0;
+      }
+    }
+
+    li.slick-active{
+      background: white;
+    }
+  }
+
+  .slidePagos{
+    width: 100%;
+    position: relative;
+    height: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 2;
+
+    img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .slp01{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 18%;
+      bottom: 14%;
+    }
+  }
+  .slp02{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 57%;
+      bottom: 40%;
+    }
+  }
+  .slp03{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 57%;
+      bottom: 40%;
+    }
+  }
+  .slp04{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 57%;
+      bottom: 40%;
+    }
+  }
+
+
+  .slv01{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 64%;
+      bottom: 57%;
+
+      &:before{
+        left:60%;
+        top:-10px;
+      }
+    }
+  }
+  .slv02{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 42%;
+      bottom: 40%;
+
+      &:before{
+        left:calc(100% - 20px);
+        top:42%;
+      }
+    }
+  }
+  .slv03{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 63%;
+      bottom: 40%;
+    }
+  }
+  .slv04{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 28%;
+      bottom: 54%;
+
+      &:before{
+        left:calc(100% - 20px);
+        top:42%;
+      }
+    }
+  }
+}
