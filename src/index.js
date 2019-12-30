@@ -87,19 +87,19 @@ let selccionaArea = ()=> {
 }
 
 var
-    vincula=false,
+    vinculaPagos=false,
     pagos=false,
-    retiros=false,
+    vinculaRetiros=false,
     terminos=false;
 
 var showTitle = (salida)=>{
 
-    $(".titulo .vincula,.retiros,.pagos").addClass("dn")
+    $(".titulo .vinculaRetiros,.vinculaPagos,.pagos").addClass("dn")
 
-    if(vincula){
-        $(".titulo .vincula").removeClass("dn")
+    if(vinculaPagos){
+        $(".titulo .vinculaPagos").removeClass("dn")
         anime({
-            targets: '.titulo .vincula',
+            targets: '.titulo .vinculaPagos',
             width:salida ? ["100%","0"] : ["0","100%"],
             opacity:salida?[1,0] :[0,1],
         })
@@ -112,8 +112,8 @@ var showTitle = (salida)=>{
             opacity:salida?[1,0] :[0,1],
         })
     }
-    if(retiros){
-        $(".titulo .retiros").removeClass("dn")
+    if(vinculaRetiros){
+        $(".titulo .vinculaRetiros").removeClass("dn")
         anime({
             targets: '.titulo .retiros',
             width:salida ? ["100%","0"] : ["0","100%"],
@@ -122,6 +122,14 @@ var showTitle = (salida)=>{
     }
 }
 
+
+let cambiaVincula = function(){
+    if(vinculaRetiros){
+
+    }else{
+
+    }
+}
 
 $(document).ready(function(){
 
@@ -187,33 +195,34 @@ $(document).ready(function(){
 
 
 
+
     $(".btn-van.left").click(function(){
-        if(vincula){
-            $('.sliderStep02').slick('slickPrev');
-        }
-        else if(pagos){
+        if(vinculaPagos){
             $('.sliderStep01').slick('slickPrev');
         }
-        else if(retiros){
+        else if(pagos){
             $('.sliderStep03').slick('slickPrev');
+        }
+        else if(vinculaRetiros){
+            $('.sliderStep02').slick('slickPrev');
         }
     })
     $(".btn-van.right").click(function(){
-        if(vincula){
-            $('.sliderStep02').slick('slickNext');
-        }
-        else if(pagos){
+        if(vinculaPagos){
             $('.sliderStep01').slick('slickNext');
         }
-        else if(retiros){
+        else if(pagos){
             $('.sliderStep03').slick('slickNext');
+        }
+        else if(vinculaRetiros){
+            $('.sliderStep02').slick('slickNext');
         }
     })
 
     $("#paraVincular button").click(function(){
-        vincula = true;
+        vinculaPagos = true;
         showTitle()
-        $('.sliderStep02').removeClass("dn");
+        $('.sliderStep01').removeClass("dn");
         openSlider()
     })
 
@@ -225,7 +234,7 @@ $(document).ready(function(){
     $("#activarPagos button").click(function(){
         pagos = true;
         showTitle()
-        $('.sliderStep01').removeClass("dn");
+        $('.sliderStep03').removeClass("dn");
         openSlider()
     })
 
@@ -253,25 +262,19 @@ $(document).ready(function(){
                     terminos=false
                 }
 
-                vincula=false;
+                vinculaPagos=false;
                 pagos=false;
-                retiros=false;
+                vinculaRetiros=false;
                 $('.sliderStep03, .sliderStep01,.sliderStep02').addClass("dn")
                 showTitle(true)
-                console.log(terminos,"::::: los terminos")
+
             }
         });
     })
 
 
 
-    $(".curva").css({
-        height:($(".s02").offset().top + $(".s02").height())
-    })
-
-
-
-
+    $(".curva").css({height:($(".s02").offset().top + $(".s02").height())})
     $(".iconCircle").addClass("reposo");
     $(".myList li").addClass("opn");
 
