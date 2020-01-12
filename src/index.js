@@ -72,6 +72,29 @@ let s01 = parseInt($("#visionGeneral").offset().top),
     s04 = parseInt($("#comoUsarlo").offset().top),
     s05 = parseInt($(".s06").offset().top);
 
+var sliders = {
+    vinculaPagos    : $('.sliderStep01'),
+    vinculaRertiros : $('.sliderStep02'),
+    realizaPagos    : $('.sliderStep03'),
+    realizaRetiros  : $('.sliderStep04'),
+}
+
+var titulos = {
+    vinculaPagos    :  $(".vinculat"),
+    vinculaRertiros :  $(".vinculat"),
+    realizaPagos    :  $(".pagost"),
+    realizaRetiros  :  $(".retirost")
+}
+
+var sliderActivo =  null;
+var tituloActivo = null;
+var terminos = false;
+
+var paraP     = $("#tab-pagos"),
+    paraR     = $("#tab-retiros"),
+    selection = $("#selection"),
+    btnClose  = $(".btnClose");
+
 let selccionaArea = ()=> {
 
     let scroll = $(".main-container").scrollTop();
@@ -86,50 +109,150 @@ let selccionaArea = ()=> {
     else if(scroll >= s05 )     { $(".menuFlotante button").removeClass("active")}
 }
 
-var
-    vinculaPagos=false,
-    pagos=false,
-    vinculaRetiros=false,
-    terminos=false;
+var cambiaPagosRetirosslider = (x)=>{
 
-var showTitle = (salida)=>{
+    let sale   =  x  === "pagos" ? ".sliderStep02" : ".sliderStep01";
+    let entra  =  x  === "pagos" ? ".sliderStep01" : ".sliderStep02";
 
-    $(".titulo .vinculaRetiros,.vinculaPagos,.pagos").addClass("dn")
+    sliderActivo = $(entra)
 
-    if(vinculaPagos){
-        $(".titulo .vinculaPagos").removeClass("dn")
-        anime({
-            targets: '.titulo .vinculaPagos',
-            width:salida ? ["100%","0"] : ["0","100%"],
-            opacity:salida?[1,0] :[0,1],
+    $(".mini-tabs button").attr("disabled",true)
+    btnClose.attr("disabled",true)
+
+    $(sale).css({
+        position:"absolute",
+        top:0
+    })
+    anime({
+        targets:sale,
+        translateY:x  === "pagos" ? ["0","100%"]:["0","-100%"],
+        easing: 'spring(1, 250, 18, 10)',
+        opacity:[1,0],
+        complete:function(){
+          $(sale).slick('unslick')
+            $(sale).css({
+                position:"relative",
+                transform:"translateY(0)",
+                opacity:"1"
+            }).addClass('dn')
+            console.log("lo quité")
+        }
+    })
+
+    $(entra).removeClass("dn")
+    setTimeout(function () {
+        sliderActivo.slick({
+            arrows:false,
+            infinite:false,
+            dots:true
         })
-    }
-    if(pagos){
-        $(".titulo .pagos").removeClass("dn")
-        anime({
-            targets: '.titulo .pagos',
-            width:salida ? ["100%","0"] : ["0","100%"],
-            opacity:salida?[1,0] :[0,1],
-        })
-    }
-    if(vinculaRetiros){
-        $(".titulo .vinculaRetiros").removeClass("dn")
-        anime({
-            targets: '.titulo .retiros',
-            width:salida ? ["100%","0"] : ["0","100%"],
-            opacity:salida?[1,0]:[0,1],
-        })
-    }
+    },5)
+
+    anime({
+        targets:entra,
+        translateY:x  === "pagos" ? ["-100%","0"]:["100%","0"],
+        easing: 'spring(1, 250, 18, 10)',
+        opacity:[0,1],
+        complete:function(){
+            $(".mini-tabs button").removeAttr("disabled")
+            btnClose.removeAttr("disabled")
+        }
+
+    })
+
+    $(".btn-van.left").click(function () {$(entra).slick('slickPrev')})
+    $(".btn-van.right").click(function () {$(entra).slick('slickNext')})
 }
 
 
-let cambiaVincula = function(){
-    if(vinculaRetiros){
+var minitabs = function(){
 
-    }else{
+    //mueve la seleccion
+    let moveSelection = ()=>{
+        if(paraR.hasClass('active')){
+            selection.css({
+                transform:"translateX(0)"
+            })
+        }else{
+            selection.css({
+                transform:"translateX(-100%)"
+            })
+        }
+    }
+
+    //CLICK DE LOS TABS
+    let Tabsfunction = function(x){
+         let disable =  x === "pagos" ? paraP : paraR;
+         let active  =  x === "pagos" ? paraR : paraP;
+
+        disable
+             .attr("disabled",true)
+             .addClass("active")
+        active
+            .attr("disabled",false)
+            .removeClass("active")
+        cambiaPagosRetirosslider(x)
+    }
+
+    moveSelection()
+
+    paraP.click(function(){
+        Tabsfunction('pagos')
+        moveSelection()
+    })
+
+    paraR.click(function(){
+        Tabsfunction('retiros')
+        moveSelection()
+    })
+}
+
+var openSlider = function(term,slider){
+
+    if(!term){
+        minitabs()
+        sliderActivo = sliders[slider]
+        sliderActivo.removeClass("dn").slick({
+            arrows:false,
+            infinite:false,
+            dots:true
+        })
+
+        tituloActivo = titulos[slider]
+        tituloActivo.removeClass("dn")
+        $(".btn-van.left") .click(function (){ sliderActivo.slick('slickPrev')})
+        $(".btn-van.right").click(function (){ sliderActivo.slick('slickNext')})
+    }
+
+    if(slider === ""){
 
     }
+
+    if(term) {
+        $(".cont-modal ,.terminos").removeClass("dn")
+        terminos = true;
+    }
+    else{$(".cont-modal,.pasos").removeClass("dn")}
+
+    setTimeout(function(){
+        anime({
+            targets: '.sombra',
+            opacity:[0,.8],
+            easing:"easeOutExpo",
+        });
+
+        anime({
+            targets: '.ventana',
+            translateY:terminos ?[100,0] :[-100,0],
+            scale:[1,1],
+            opacity:[0,1],
+            easing:'spring(1, 100, 20, 20)'
+        });
+    },100)
 }
+
+
+
 
 $(document).ready(function(){
 
@@ -139,6 +262,9 @@ $(document).ready(function(){
     $("#btnFour").click(function(){animaScroll("comoUsarlo")})
     $("#btnfive").click(function(){animaScroll("vincular")})
 
+    $(".curva").css({height:($(".s02").offset().top + $(".s02").height())})
+    $(".iconCircle").addClass("reposo");
+    $(".myList li").addClass("opn");
 
     if($(window).width() < 998){
         $(".menu01 li").click(function(e){
@@ -154,94 +280,41 @@ $(document).ready(function(){
 
     $("#showM").click(function(){
         $(".cont-menu").toggleClass("SM")
-
         $(this).find(".open,.closem").toggleClass("dn")
-
         $(".submenu").removeClass("")
-
     })
 
-    var openSlider = function(term){
 
-        if(term) {
-            $(".cont-modal ,.terminos").removeClass("dn")
-            terminos = true;
-        }
-        else{
-            $(".cont-modal,.pasos").removeClass("dn")
-            $('.sliderStep01,.sliderStep02,.sliderStep03').slick({
-                arrows:false,
-                infinite:false,
-                dots:true
-            });
-        }
 
-        setTimeout(function(){
-            anime({
-                targets: '.sombra',
-                opacity:[0,.8],
-                easing:"easeOutExpo",
-            });
 
-            anime({
-                targets: '.ventana',
-                translateY:terminos ?[100,0] :[-100,0],
-                scale:[1,1],
-                opacity:[0,1],
-                easing:'spring(1, 100, 20, 20)',
-            });
-        },100)
+    if(window.location.hash === "#politicas"){
+        $(".terminos").removeClass("dn")
+        openSlider(true)
     }
 
-
-
-
-    $(".btn-van.left").click(function(){
-        if(vinculaPagos){
-            $('.sliderStep01').slick('slickPrev');
-        }
-        else if(pagos){
-            $('.sliderStep03').slick('slickPrev');
-        }
-        else if(vinculaRetiros){
-            $('.sliderStep02').slick('slickPrev');
-        }
-    })
-    $(".btn-van.right").click(function(){
-        if(vinculaPagos){
-            $('.sliderStep01').slick('slickNext');
-        }
-        else if(pagos){
-            $('.sliderStep03').slick('slickNext');
-        }
-        else if(vinculaRetiros){
-            $('.sliderStep02').slick('slickNext');
-        }
-    })
-
-    $("#paraVincular button").click(function(){
-        vinculaPagos = true;
-        showTitle()
-        $('.sliderStep01').removeClass("dn");
-        openSlider()
-    })
-
+    //abre los terminos y condiciones
     $("#terminos").click(function(){
         $(".terminos").removeClass("dn")
         openSlider(true)
     })
 
-    $("#activarPagos button").click(function(){
-        pagos = true;
-        showTitle()
-        $('.sliderStep03').removeClass("dn");
-        openSlider()
+    //vincula
+    $("#paraVincular").click(function(){
+        $(".vincula").removeClass("dn")
+        openSlider(false,'vinculaPagos')
     })
 
+    //realizar pagos
+    $("#realizarPagos").click(function(){
+        openSlider(false,'realizaPagos')
+    })
 
+    //realizar retiros
+    $("#realizaRetiros").click(function(){
+        openSlider(false,'realizaRetiros')
+    })
 
     $(".close").click(function () {
-
 
         anime({
             targets: '.sombra',
@@ -255,28 +328,27 @@ $(document).ready(function(){
             opacity:[1,0],
             easing:'spring(1, 100, 20, 15)',
             complete:function(){
-                $(".cont-modal, .pasos , .terminos").addClass("dn")
-                if(!terminos){
-                    $('.sliderStep01,.sliderStep02,.sliderStep03').slick('unslick');
-                }else{
-                    terminos=false
+                if(sliderActivo !== null){
+                    sliderActivo.slick('unslick')
+                    .css({
+                        position:"relative"
+                    })
+                    sliderActivo.addClass("dn")
+                    sliderActivo = null;
+                    tituloActivo.addClass("dn")
+                    tituloActivo = null;
+
+                    paraP.addClass("active")
+                    paraR.removeClass("active")
                 }
-
-                vinculaPagos=false;
-                pagos=false;
-                vinculaRetiros=false;
-                $('.sliderStep03, .sliderStep01,.sliderStep02').addClass("dn")
-                showTitle(true)
-
+                $(".cont-modal,.terminos,.pasos").addClass("dn")
             }
         });
     })
 
 
 
-    $(".curva").css({height:($(".s02").offset().top + $(".s02").height())})
-    $(".iconCircle").addClass("reposo");
-    $(".myList li").addClass("opn");
+
 
 
 

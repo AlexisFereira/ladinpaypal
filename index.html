@@ -292,13 +292,10 @@
 
                         <ul class="myList">
                             <li>Habilite fácilmente PayPal como medio de pago desde el tablero de administración.​</li>
-
                             <li>Visualice en tiempo real los pagos recibidos con PayPal.​</li>
-
-                            <li>Uso simplificado para sus clientes al seleccionar PayPal como medio de pago. ​</li>
-
-                            <li>Brinde un medio de pago seguro y globalmente aceptado.</li>
                             <li>Reciba el dinero de sus ventas directamente en su cuneta PayPal</li>
+                            <li>Uso simplificado para sus clientes al seleccionar PayPal como medio de pago. ​</li>
+                            <li>Brinde un medio de pago seguro y globalmente aceptado.</li>
                         </ul>
 
                         <p>Aplican <a id="terminos">Términos y Condiciones</a></p>
@@ -390,18 +387,18 @@
                         <div class="wc py-3">
                             Pasos para <br> <b>Realizar Pagos</b>
                         </div>
-                        <div class="cont-btn" id="activarPagos">
+                        <div class="cont-btn" id="realizarPagos">
                             <button class="ver-pasos">Ver pasos</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-5 mb-md-0 dn">
+                <div class="col-12 col-md-4 mb-5 mb-md-0 ">
                     <div class="widget text-center p-3  hc pb-5 pb-md-0">
-                        <img src="img/vincular.png" alt="">
+                        <img src="img/realiza-retiros.png" alt="">
                         <div class="wc py-3">
                             Pasos para <br> <b>Realizar Retiros</b>
                         </div>
-                        <div class="cont-btn" id="activarRetiros">
+                        <div class="cont-btn" id="realizaRetiros">
                             <button class="ver-pasos">Ver pasos</button>
                         </div>
                     </div>
@@ -595,9 +592,9 @@
         <div class="sombra"></div>
         <div class="area f02">
             <div class="ventana">
-                <div class="close f02">
+                <button class="close f02 btnClose">
                     <i class="material-icons">close</i>
-                </div>
+                </button>
                 <div class="terminos dn">
                     <div class="wc px-3 px-lg-4">
                         <h2 class="wc py-3 text-center ">Términos y condiciones</h2>
@@ -642,22 +639,24 @@
                     </div>
                 </div>
                 <div class="pasos wc dn">
-                    <div class="titulo">
-                        <div class="wc vinculaPagos dn">
+                    <div class="titulo pr-2">
+                        <div class="wc vinculat dn f01">
                             Vincular
                             <img src="img/paypal-b.svg" height="25" width="auto" class="mx-2 d-none d-md-inline" alt="">
                             <img src="img/paypal.svg" height="25" width="auto" class="mx-2 d-md-none" alt="">
-                            para Pagos
+                            <div class="mini-tabs">
+                                <div  class="selection" id="selection"></div>
+                                <button class="active" id="tab-pagos">Para Pagos</button>
+                                <button id="tab-retiros">Para Retiros</button>
+                            </div>
                         </div>
-                        <div class="wc vinculaRetiros dn">
-                            Activar
+                        <div class="wc pagost dn">
+                            Realizar pagos con
                             <img src="img/paypal-b.svg" height="25" width="auto" class="mx-2 d-none d-md-inline" alt="">
                             <img src="img/paypal.svg" height="25" width="auto" class="mx-2 d-md-none" alt="">
-                            para
-                            Retiros
                         </div>
-                        <div class="wc pagos dn">
-                            Realizar pagos con
+                        <div class="wc retirost dn">
+                            Realizar retiros con
                             <img src="img/paypal-b.svg" height="25" width="auto" class="mx-2 d-none d-md-inline" alt="">
                             <img src="img/paypal.svg" height="25" width="auto" class="mx-2 d-md-none" alt="">
                         </div>
@@ -676,82 +675,80 @@
                     <!--
                     /////////////   Para pagos  /////////////////
                     -->
-                    <div class="sliderStep01 dn">
-                        <div class="slidePagos slp01">
-                            <img src="img/steps/slidepagos01.png" alt="">
-                            <div class="globoInfo">
-                                Para activar PayPal para pagos en su dashboard, diríjase a la sección de <b>Medios de
-                                pago</b> haciendo clic en el menú en la opción:
-                                <br> <b>Configuración / Medios de pago</b>
+                    <div class="vincula dn">
+                        <div class="sliderStep01 dn">
+                            <div class="slidePagos slp01">
+                                <img src="img/steps/slidepagos01.png" alt="">
+                                <div class="globoInfo">
+                                    Para activar PayPal para pagos en su dashboard, diríjase a la sección de <b>Medios de
+                                    pago</b> haciendo clic en el menú en la opción:
+                                    <br> <b>Configuración / Medios de pago</b>
+                                </div>
+                            </div>
+                            <div class="slidePagos slp02">
+                                <img src="img/steps/slidepagos02.png" alt="">
+                                <div class="globoInfo">
+                                    Estando en la sección de <b>Medios de pago</b> baje hasta la sección <b>Transferencias
+                                    bancarias nacionales e internacionales.</b>
+                                    <br><br>
+                                    Ubíquese en la tarjeta de paypal, acepte los términos y condiciones y haga clic en el
+                                    botón
+                                    de
+                                    <b>Vincular PayPal Express Checkout</b>
+                                </div>
+                            </div>
+                            <div class="slidePagos slp03">
+                                <img src="img/steps/slidepagos03.png" alt="">
+                                <div class="globoInfo">
+                                    Al hacer clic en el botón <b>Vincular PayPal Express Checkout</b> se deplegará una nueva
+                                    ventana con un formulario PayPal, complete este formulario con sus datos para continuar
+                                    con
+                                    el proceso
+                                </div>
+                            </div>
+                            <div class="slidePagos slp04">
+                                <img src="img/steps/slidepagos04.png" alt="">
+                                <div class="globoInfo">
+                                    Una vez completado y finalizado el formulairo de la ventana emergente estará activado el
+                                    medio de pago PayPal.
+                                </div>
                             </div>
                         </div>
-                        <div class="slidePagos slp02">
-                            <img src="img/steps/slidepagos02.png" alt="">
-                            <div class="globoInfo">
-                                Estando en la sección de <b>Medios de pago</b> baje hasta la sección <b>Transferencias
-                                bancarias nacionales e internacionales.</b>
-                                <br><br>
-                                Ubíquese en la tarjeta de paypal, acepte los términos y condiciones y haga clic en el
-                                botón
-                                de
-                                <b>Vincular PayPal Express Checkout</b>
+                        <div class="sliderStep02 dn">
+                            <div class="slidePagos slv01">
+                                <img src="img/steps/slideVinculate01.png" alt="">
+                                <div class="globoInfo">
+                                    Para vincular PayPal haga clic en el botón ubicado en la parte superior con el logo de
+                                    PayPal.
+                                    <br><br> Esto lo llevará a una nueva sección para continuar con el proceso.
+                                </div>
                             </div>
-                        </div>
-                        <div class="slidePagos slp03">
-                            <img src="img/steps/slidepagos03.png" alt="">
-                            <div class="globoInfo">
-                                Al hacer clic en el botón <b>Vincular PayPal Express Checkout</b> se deplegará una nueva
-                                ventana con un formulario PayPal, complete este formulario con sus datos para continuar
-                                con
-                                el proceso
+                            <div class="slidePagos slv02">
+                                <img src="img/steps/slideVinculate02.png" alt="">
+                                <div class="globoInfo">
+                                    Estando en la sección <b>Vincular paypal</b> debe confirmar que acepta los <b>Términos y
+                                    Condiciones</b> y luego hacer clic en el botón de <b>Vincular cuenta</b>
+                                    para continuar con el proceso.
+                                    <br><br>
+                                    Si no pose una cuenta PayPal, haga clic en el enlace inferior para abrir una.
+                                </div>
                             </div>
-                        </div>
-                        <div class="slidePagos slp04">
-                            <img src="img/steps/slidepagos04.png" alt="">
-                            <div class="globoInfo">
-                                Una vez completado y finalizado el formulairo de la ventana emergente estará activado el
-                                medio de pago PayPal.
+                            <div class="slidePagos slv03">
+                                <img src="img/steps/slideVinculate03.png" alt="">
+                                <div class="globoInfo">
+                                    Luego de haber hecho clic en el botón de <b>Vincular cuenta</b>, saldrá una nueva
+                                    ventana emergente con un formulario de PayPal.
+                                    <br><br>
+                                    Complete este formulario para realizar el proceso de vinculación.
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!--
-                    /////////////   Para Vincular  /////////////////
-                    -->
-                    <div class="sliderStep02 dn">
-                        <div class="slidePagos slv01">
-                            <img src="img/steps/slideVinculate01.png" alt="">
-                            <div class="globoInfo">
-                                Para vincular PayPal haga clic en el botón ubicado en la parte superior con el logo de
-                                PayPal.
-                                <br><br> Esto lo llevará a una nueva sección para continuar con el proceso.
-                            </div>
-                        </div>
-                        <div class="slidePagos slv02">
-                            <img src="img/steps/slideVinculate02.png" alt="">
-                            <div class="globoInfo">
-                                Estando en la sección <b>Vincular paypal</b> debe confirmar que acepta los <b>Términos y
-                                Condiciones</b> y luego hacer clicl en el botón de <b>Vincular cuenta</b>
-                                para continuar con el proceso.
-                                <br><br>
-                                Si no pose una cuenta PayPal, haga clic en el enlace inferior para abrir una.
-                            </div>
-                        </div>
-                        <div class="slidePagos slv03">
-                            <img src="img/steps/slideVinculate03.png" alt="">
-                            <div class="globoInfo">
-                                Luego de haber hecho clic en el botón de <b>Vincular cuenta</b>, saldrá una nueva
-                                ventana emergente con un formulario de PayPal.
-                                <br><br>
-                                Complete este formulario para realizar el proceso de vinculación.
-                            </div>
-                        </div>
-                        <div class="slidePagos slv04">
-                            <img src="img/steps/slideVinculate04.png" alt="">
-                            <div class="globoInfo">
-                                Una vez completado y finalizado el formulairo de la ventana emergente, se mostrará un
-                                mensaje confirmación de la vinculación, al hacer clic en finalizar, sera redirigido a la
-                                sección de saldos donde podrá visualizar su saldo actual de PayPal
+                            <div class="slidePagos slv04">
+                                <img src="img/steps/slideVinculate04.png" alt="">
+                                <div class="globoInfo">
+                                    Una vez completado y finalizado el formulario de la ventana emergente, se mostrará un
+                                    mensaje confirmación de la vinculación, al hacer clic en finalizar, será redirigido a la
+                                    sección de saldos donde podrá visualizar su saldo actual de PayPal
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -760,6 +757,40 @@
                     /////////////   Para Pagos  /////////////////
                     -->
                     <div class="sliderStep03 dn">
+                        <div class="slidePagos slrp01">
+                            <img src="img/steps/slidePagar01.png" alt="">
+                            <div class="globoInfo">
+                                Para realizar pagos con <b>PayPal</b> desde nuestro checkout en la pantalla de inicio,
+                                ingrese su dirección de correo electrónico para habilitar los medios de pagos, luego
+                                seleccione paypal como medio de pago
+                            </div>
+                        </div>
+                        <div class="slidePagos slrp02">
+                            <img src="img/steps/slidePagar02.png" alt="">
+                            <div class="globoInfo">
+                                Ingrese sus datos y haga clic en el botón inferior <b>PayPal checkout</b>
+                            </div>
+                        </div>
+                        <div class="slidePagos slrp03">
+                            <img src="img/steps/slidePagar03.png" alt="">
+                            <div class="globoInfo">
+                                Luego de haber hecho clic en el botón de <b>Vincular cuenta</b>, saldrá una nueva
+                                ventana emergente para ingresar a su cuenta peypal y realizar el pago.
+                            </div>
+                        </div>
+                        <div class="slidePagos slrp04">
+                            <img src="img/steps/slidePagar04.png" alt="">
+                            <div class="globoInfo">
+                                Una vez completado y finalizado el pago en la ventana emergente de PayPal, el checkout
+                                mostará el estado de de su transacción.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    /////////////   Para Retiros  /////////////////
+                    -->
+                    <div class="sliderStep04 dn">
                         <div class="slidePagos slrp01">
                             <img src="img/steps/slidePagar01.png" alt="">
                             <div class="globoInfo">
