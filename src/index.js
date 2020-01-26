@@ -135,7 +135,6 @@ var cambiaPagosRetirosslider = (x)=>{
                 transform:"translateY(0)",
                 opacity:"1"
             }).addClass('dn')
-            console.log("lo quité")
         }
     })
 
@@ -146,7 +145,7 @@ var cambiaPagosRetirosslider = (x)=>{
             infinite:false,
             dots:true
         })
-    },5)
+    },10)
 
     anime({
         targets:entra,
@@ -291,6 +290,12 @@ $(document).ready(function(){
         $(".terminos").removeClass("dn")
         openSlider(true)
     }
+
+    if(window.location.hash === "#noenter"){
+        $("#tab-retiros ,.paraRetiros,#tab-pagos,#selection").removeClass("dn")
+        $("#textoNormal").addClass("dn")
+    }
+
 
     //abre los terminos y condiciones
     $("#terminos").click(function(){

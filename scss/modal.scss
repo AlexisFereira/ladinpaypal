@@ -293,6 +293,72 @@
       }
     }
   }
+
+  .slrs01{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 66%;
+      bottom: 46%;
+
+      &:before{
+        left:48%;
+        top:-10px;
+      }
+    }
+  }
+  .slrs02{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 9%;
+      bottom: 56%;
+
+      &:before{
+        left:calc(100% - 20px);
+        top:30%;
+      }
+    }
+  }
+  .slrs03{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 9%;
+      bottom: 40%;
+
+      &:before{
+        left:calc(100% - 19px);
+        top:36%;
+      }
+    }
+  }
+  .slrs04{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 9%;
+      bottom: 24%;
+
+      &:before{
+        left:calc(100% - 20px);
+        top:42%;
+      }
+    }
+  }
+  .slrs05{
+    .globoInfo{
+      position: absolute;
+      max-width: 300px;
+      left: 8%;
+      bottom: 38%;
+
+      &:before{
+        left:calc(100% - 20px);
+        top:42%;
+      }
+    }
+  }
 }
 
 
