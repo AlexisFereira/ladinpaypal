@@ -183,7 +183,7 @@
                     <div class="wc py-3">
                         <img src="img/paypal.svg" alt="PayPal" height="50px" width="auto">
                     </div>
-                    <p><img src="img/epayco.svg" alt="ePayco" height="25px" width="auto" class="mr-2"> <span class="dn">lo deposita en su
+                    <p><img src="img/epayco.svg" alt="ePayco" height="25px" width="auto" class="mr-2"> <span class="">lo deposita en su
                         cuenta bancaria</span></p>
                 </div>
             </div>
@@ -198,7 +198,7 @@
         <div class="enlaces f01 jcfe">
             <button id="btnone">Visión general</button>
             <button id="btntwo" class="go07">Para pagos</button>
-            <!--                <button id="btnthree">Para retiros</button>-->
+            <button id="btnthree">Para retiros</button>
             <button id="btnFour">Como usarlo</button>
             <button id="btnfive" class="main">Vincular paypal</button>
         </div>
@@ -306,7 +306,7 @@
     </section>
 
 
-    <section id="paraRetiros" class="s04 dn ">
+    <section id="paraRetiros" class="s04">
         <div class="container px-lg-0">
             <div class="wc text-center title-section"><h1>Cómo usar PayPal con ePayco</h1></div>
             <div class="wc f01">
@@ -392,7 +392,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-5 mb-md-0 paraRetiros dn">
+                <div class="col-12 col-md-4 mb-5 mb-md-0 paraRetiros">
                     <div class="widget text-center p-3  hc pb-5 pb-md-0">
                         <img src="img/realiza-retiros-2.png" alt="">
                         <div class="wc py-3">
@@ -515,7 +515,7 @@
         <img src="img/manchas/manchafooter.png" alt="" class="mancha">
         <img src="img/manchas/puntosF.png" alt="" class="puntos">
 
-        <div class="container px-lg-0 text-center px-0">
+        <div class="position-relative container px-lg-0 text-center px-0" style="z-index: 100">
             <div class="texto wc pb-4 px-3">
                 <img src="img/vectores/img05.png" alt="Vincule-Paypal" class="chico">
                 <h1>Vincule su cuenta PayPal</h1>
@@ -532,11 +532,11 @@
                         Vincular para pagos
                     </a>
                 </div>
-                <!--                <div class="col-12 col-md-6  mb-3">-->
-                <!--                    <button class="btnRound outline">-->
-                <!--                        Vincular para Retiros-->
-                <!--                    </button>-->
-                <!--                </div>-->
+                <div class="col-12 col-md-6  mb-3">
+                    <button class="btnRound outline">
+                        Vincular para Retiros
+                    </button>
+                </div>
                 <div class="col-12 col-md-6 mb-3">
                     <a
                             href="https://www.paypal.com/co/webapps/mpp/home?gclsrc=aw.ds&gclid=CjwKCAiAuqHwBRAQEiwAD-zr3eR8KDd0Q1adBWlSY6K8mDO66CSHDOXUbC11A-_ExFMkIQO9HoOp8hoCjzkQAvD_BwE&gclsrc=aw.ds"
@@ -645,10 +645,10 @@
                             <img src="img/paypal-b.svg" height="25" width="auto" class="mx-2 d-none d-md-inline" alt="">
                             <img src="img/paypal.svg" height="25" width="auto" class="mx-2 d-md-none" alt="">
                             <div class="mini-tabs">
-                                <div  class="selection dn" id="selection"></div>
-                                    <p class="mb-0 px-3 cb " id="textoNormal">Para pagos</p>
-                                <button class="active dn" id="tab-pagos" >Para Pagos</button>
-                                <button id="tab-retiros" class="dn">Para Retiros</button>
+                                <div  class="selection" id="selection"></div>
+<!--                                    <p class="mb-0 px-3 cb " id="textoNormal">Para pagos</p>-->
+                                <button class="active" id="tab-pagos" >Para Pagos</button>
+                                <button id="tab-retiros" >Para Retiros</button>
                             </div>
                         </div>
                         <div class="wc pagost dn">
