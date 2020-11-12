@@ -11,8 +11,6 @@ module.exports = (env, args) => {
 
     const devMode = args.mode !== "production";
 
-    console.log()
-
     return{
 
         mode:'development',
@@ -20,7 +18,7 @@ module.exports = (env, args) => {
         output: {
             path: path.resolve(__dirname, './dist'),
             filename: 'bundle.[hash:4].js',
-            publicPath: '/'
+            publicPath: '/paypal'
         },
 
         performance: {
@@ -79,7 +77,7 @@ module.exports = (env, args) => {
                     loader: "file-loader",
                     options: {
                         publicPath: "img",
-                        outputPath: "img"
+                        outputPath: "/img"
                     }
                 }
             ]

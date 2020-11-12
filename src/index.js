@@ -268,7 +268,7 @@ $(document).ready(function(){
     if($(window).width() < 998){
         $(".menu01 li").click(function(e){
 
-            $(this).find(".submenu").hasClass("sOpen") ?
+                $(this).find(".submenu").hasClass("sOpen") ?
                 $(this).find(".submenu").removeClass("sOpen"):
                 $(this).find(".submenu").addClass("sOpen")
 
